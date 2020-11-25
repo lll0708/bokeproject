@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * 作品点赞表的业务逻辑层
  */
+
 public interface LikeService {
     //点赞成功(添加一条数据)
     public boolean addLike(Like like);

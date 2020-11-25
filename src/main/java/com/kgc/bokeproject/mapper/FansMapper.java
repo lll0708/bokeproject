@@ -21,6 +21,11 @@ public interface FansMapper {
 
     Fans selectByPrimaryKey(Integer id);
 
+    //查粉丝数
+    List<Fans> selectFansByUserId(Integer userId);
+    //查关注数
+    List<Fans> selectFocusOnByFans(Integer fans);
+
     int updateByExampleSelective(@Param("record") Fans record, @Param("example") FansExample example);
 
     int updateByExample(@Param("record") Fans record, @Param("example") FansExample example);

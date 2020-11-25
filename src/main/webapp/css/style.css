@@ -75,7 +75,16 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	overflow-x: hidden;
 	font-weight: 400;
-	background-color: #eeeeee;
+	/*background-color: #eeeeee;*/
+
+
+	background-image: url(../images/backg.jpg); /*背景图片路径设置*/
+	background-repeat:no-repeat; /*不进行平铺，图片适应窗口大小*/
+	background-attachment: fixed; /*背景图片固定，不随内容滚动*/
+	background-origin: border-box; /*从边框区域显示*/
+	background-size:cover;/*全部覆盖*/
+
+
 }
 ol, ul {
 	list-style: none;

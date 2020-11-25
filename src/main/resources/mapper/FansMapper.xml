@@ -68,6 +68,12 @@
   <sql id="Base_Column_List" >
     id, user_id, fans, status
   </sql>
+  <select id="selectFansByUserId" resultType="com.kgc.bokeproject.pojo.Fans">
+    select * from fans where user_id=#{value}
+  </select>
+  <select id="selectFocusOnByFans" resultType="com.kgc.bokeproject.pojo.Fans">
+    select * from fans where fans=#{value}
+  </select>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.bokeproject.pojo.FansExample" >
     select
     <if test="distinct" >
