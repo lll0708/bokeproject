@@ -13,6 +13,26 @@ public class Inform {
 
     private Integer essayId;
 
+    private Users user;
+
+    private Essay essay;
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public Essay getEssay() {
+        return essay;
+    }
+
+    public void setEssay(Essay essay) {
+        this.essay = essay;
+    }
+
     public Integer getId() {
         return id;
     }

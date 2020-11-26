@@ -7,6 +7,8 @@
     <result column="reason" property="reason" jdbcType="VARCHAR" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="essay_id" property="essayId" jdbcType="INTEGER" />
+    <association property="user" select="com.kgc.bokeproject.mapper.UsersMapper.selectByPrimaryKey" column="user_id"></association>
+    <association property="essay" select="com.kgc.bokeproject.mapper.EssayMapper.selectByPrimaryKey" column="essay_id"></association>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

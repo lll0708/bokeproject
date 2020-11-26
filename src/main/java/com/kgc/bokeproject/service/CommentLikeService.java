@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * @author 李龙龙
  * 评论点赞表的service接口
+ * 2020年11月26日12:08:58
  */
 public interface CommentLikeService {
     //查看评论点赞的数
