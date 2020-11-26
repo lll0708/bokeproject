@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/main/resources/mapper/EssayLikeMapper.xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
@@ -211,6 +212,8 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 =======
+=======
+>>>>>>> 755c82793d1a3b9fa210d7d0a7da609f3cc27a98
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.kgc.bokeproject.mapper.EssayLikeMapper" >
@@ -422,5 +425,8 @@
       status = #{status,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<<<<<<< HEAD
 >>>>>>> 356fe39db3bf9e477a13300953609510dc1ce418:src/main/resources/mapper/LikeMapper.xml
+=======
+>>>>>>> 755c82793d1a3b9fa210d7d0a7da609f3cc27a98
 </mapper>

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 public class Users {
     private Integer id;
@@ -33,6 +34,16 @@ public class Users {
     private Integer userType;
 
     private Integer status;
+
+    private List<Fans> fans;
+
+    public List<Fans> getFans() {
+        return fans;
+    }
+
+    public void setFans(List<Fans> fans) {
+        this.fans = fans;
+    }
 
     public Integer getId() {
         return id;

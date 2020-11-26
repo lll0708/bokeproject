@@ -14,6 +14,8 @@
     <result column="profile" property="profile" jdbcType="VARCHAR" />
     <result column="user_type" property="userType" jdbcType="INTEGER" />
     <result column="status" property="status" jdbcType="INTEGER" />
+    <collection property="fans" select="com.kgc.bokeproject.mapper.FansMapper.selectFansByUserId" column="user_id"></collection>
+    <collection property="fans" select="com.kgc.bokeproject.mapper.FansMapper.selectFocusOnByFans" column="fans"></collection>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
