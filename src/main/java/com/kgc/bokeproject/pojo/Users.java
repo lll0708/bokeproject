@@ -1,5 +1,8 @@
 package com.kgc.bokeproject.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class Users {
@@ -13,10 +16,14 @@ public class Users {
 
     private Integer gender;
 
+    @JsonFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date birthday;
 
     private Integer age;
 
+    @JsonFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date creatTime;
 
     private String headPortraint;
@@ -121,5 +128,23 @@ public class Users {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", gender=" + gender +
+                ", birthday=" + birthday +
+                ", age=" + age +
+                ", creatTime=" + creatTime +
+                ", headPortraint='" + headPortraint + '\'' +
+                ", profile='" + profile + '\'' +
+                ", userType=" + userType +
+                ", status=" + status +
+                '}';
     }
 }
