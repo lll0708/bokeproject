@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="boke-project" />
+        <module name="bokeproject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="boke-project" target="1.8" />
+      <module name="bokeproject" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
