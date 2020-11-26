@@ -191,14 +191,7 @@ $(window).on("load", function() {
     //  ============== ChatBox ============== 
 
 
-    $(".chat-mg").on("click", function(){
-        $(this).next(".conversation-box").toggleClass("active");
-        return false;
-    });
-    $(".close-chat").on("click", function(){
-        $(".conversation-box").removeClass("active");
-        return false;
-    });
+
 
     //  ================== Edit Options Function =================
 

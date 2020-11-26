@@ -8,6 +8,7 @@
     <result column="contents" property="contents" jdbcType="VARCHAR" />
     <result column="time" property="time" jdbcType="TIMESTAMP" />
     <result column="status" property="status" jdbcType="INTEGER" />
+    <association property="user" select="com.kgc.bokeproject.mapper.UsersMapper.selectByPrimaryKey" column="r_id"></association>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
