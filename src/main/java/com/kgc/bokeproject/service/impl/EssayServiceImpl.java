@@ -23,7 +23,7 @@ public class EssayServiceImpl implements EssayService{
         return essayMapper.selectByPrimaryKey(id);
     }
 
-    //编辑作品(用于修改作品被点赞的次数，以及修改自己已发布的文章)
+    //编辑作品(用于修改作品被点赞的次数，以及修改自己已发布的文章,以及删除自己的作品（修改状态为0）)
     @Override
     public boolean updateEssqyById(Essay essay) {
         int i = essayMapper.updateByPrimaryKeySelective(essay);
@@ -33,12 +33,6 @@ public class EssayServiceImpl implements EssayService{
     @Override
     public boolean addEssay(Essay essay) {
         int i = essayMapper.insertSelective(essay);
-        return i>0?true:false;
-    }
-    //删除自己作品
-    @Override
-    public boolean deleteEssayById(Integer id) {
-        int i = essayMapper.deleteByPrimaryKey(id);
         return i>0?true:false;
     }
 }

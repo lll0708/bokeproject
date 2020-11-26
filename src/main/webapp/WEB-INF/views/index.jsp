@@ -317,7 +317,8 @@
 												<span><i class="la la-plus"></i></span>
 											</div>
 											<div class="view-more">
-												<a href="#" title="">View More</a>
+												<%--<a href="#" title="">View More</a>--%>
+												<a href="showEssay.do" title="">View More</a>
 											</div>
 										</div><!--suggestions-list end-->
 									</div><!--suggestions end-->

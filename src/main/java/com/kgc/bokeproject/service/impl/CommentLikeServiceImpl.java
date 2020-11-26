@@ -27,7 +27,7 @@ public class CommentLikeServiceImpl implements CommentLikeService{
     @Transactional(propagation = Propagation.SUPPORTS)
     public int getCommentLikeByComid(Integer comId) {
         CommentLikeExample example = new CommentLikeExample();
-        example.createCriteria().andComIdEqualTo(comId);
+        example.createCriteria().andComIdEqualTo(comId).andStatusEqualTo(1);
         int i = commentLikeMapper.countByExample(example);
         return i;
     }
@@ -36,7 +36,7 @@ public class CommentLikeServiceImpl implements CommentLikeService{
     @Override
     public List<CommentLike> selectCommentLikeUser(Integer comId) {
         CommentLikeExample example = new CommentLikeExample();
-        example.createCriteria().andComIdEqualTo(comId);
+        example.createCriteria().andComIdEqualTo(comId).andStatusEqualTo(1);
         List<CommentLike> commentLikes = commentLikeMapper.selectByExample(example);
         if (commentLikes!=null && commentLikes.size()>0){
             return commentLikes;

@@ -25,7 +25,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public int getCountByEssayId(Integer essayId) {
         CommentExample example = new CommentExample();
-        example.createCriteria().andEssayIdEqualTo(essayId);
+        example.createCriteria().andEssayIdEqualTo(essayId).andStatusEqualTo(1);
         int i = commentMapper.countByExample(example);
         return i;
     }
@@ -35,7 +35,7 @@ public class CommentServiceImpl implements CommentService {
     @Transactional(propagation = Propagation.SUPPORTS)
     public List<Comment> selectCommentByEssayId(Integer essayId) {
         CommentExample example = new CommentExample();
-        example.createCriteria().andEssayIdEqualTo(essayId);
+        example.createCriteria().andEssayIdEqualTo(essayId).andStatusEqualTo(1);
         List<Comment> comments = commentMapper.selectByExample(example);
         if (comments!=null&&comments.size()>0){
             return comments;

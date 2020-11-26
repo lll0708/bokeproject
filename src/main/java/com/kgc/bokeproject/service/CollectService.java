@@ -1,6 +1,7 @@
 package com.kgc.bokeproject.service;
 
 import com.kgc.bokeproject.pojo.Collect;
+import com.kgc.bokeproject.pojo.Inform;
 
 import java.util.List;
 

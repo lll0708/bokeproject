@@ -53,7 +53,7 @@ public class EssayLikeServiceImpl implements EssayLikeService {
     @Override
     public List<EssayLike> selectLikeEssayUserByEssayId(Integer essayId){
         EssayLikeExample example = new EssayLikeExample();
-        example.createCriteria().andEssayIdEqualTo(essayId);
+        example.createCriteria().andEssayIdEqualTo(essayId).andStatusEqualTo(1);
         List<EssayLike> likes = essayLikeMapper.selectByExample(example);
         if (likes!=null && likes.size()>0){
             return likes;

@@ -20,7 +20,7 @@ public class CollectServiceImpl implements CollectService {
     @Transactional(propagation = Propagation.SUPPORTS)
     public int getCountEssayByEssayId(Integer essayId) {
         CollectExample example = new CollectExample();
-        example.createCriteria().andEssayIdEqualTo(essayId);
+        example.createCriteria().andEssayIdEqualTo(essayId).andStatusEqualTo(1);
         int i = collectMapper.countByExample(example);
         return i;
     }
@@ -53,7 +53,7 @@ public class CollectServiceImpl implements CollectService {
     @Override
     public List<Collect> selectCollectByEssayId(Integer essayId) {
         CollectExample example = new CollectExample();
-        example.createCriteria().andEssayIdEqualTo(essayId);
+        example.createCriteria().andEssayIdEqualTo(essayId).andStatusEqualTo(1);
         List<Collect> collects = collectMapper.selectByExample(example);
         if (collects!=null&&collects.size()>0){
             return collects;
