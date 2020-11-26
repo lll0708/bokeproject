@@ -1,6 +1,6 @@
 package com.kgc.bokeproject.service;
 
-import com.kgc.bokeproject.pojo.Like;
+import com.kgc.bokeproject.pojo.EssayLike;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 
 public interface LikeService {
     //点赞成功(添加一条数据)
-    public boolean addLike(Like like);
+    public boolean addLike(EssayLike like);
     //取消点赞
     public boolean deleteLikeById(Integer id);
     //查询点赞的人
-    public List<Like> selectLikeEssayUserByEssayId();
+    public List<EssayLike> selectLikeEssayUserByEssayId();
 }

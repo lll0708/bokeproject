@@ -82,6 +82,7 @@ body {
 	background-repeat:no-repeat; /*不进行平铺，图片适应窗口大小*/
 	background-attachment: fixed; /*背景图片固定，不随内容滚动*/
 	background-origin: border-box; /*从边框区域显示*/
+
 	background-size:cover;/*全部覆盖*/
 
 

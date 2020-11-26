@@ -1,5 +1,6 @@
 package com.kgc.bokeproject.service;
 
+import com.kgc.bokeproject.pojo.Essay;
 import com.kgc.bokeproject.pojo.Users;
 
 import java.util.List;
@@ -19,4 +20,7 @@ public interface LoginService {
     public int getUserFans(int userId);
     //获取用户的关注数
     public int getUserFocusOn(int fans);
+    //查询-根据平时自己点赞的类型多少推荐相关类型的文章，并按照文章的点击量排序
+    //1.查用户喜欢的所有文章
+    public List<Essay> selectEssayByUserLike(Integer userId);
 }
