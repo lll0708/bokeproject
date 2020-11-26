@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 public class EssayServiceImpl implements EssayService{
     @Resource
     EssayMapper essayMapper;
-    //根据id查询作品(用于列出全文)
+    //根据id查询作品(用于列出全文以及列出点赞数)
     @Override
     public Essay getById(Integer id) {
         return essayMapper.selectByPrimaryKey(id);

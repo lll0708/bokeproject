@@ -20,6 +20,16 @@ import java.util.List;
 public class CommentServiceImpl implements CommentService {
     @Resource
     CommentMapper commentMapper;
+
+    //查询出作品下评论数
+    @Override
+    public int getCountByEssayId(Integer essayId) {
+        CommentExample example = new CommentExample();
+        example.createCriteria().andEssayIdEqualTo(essayId);
+        int i = commentMapper.countByExample(example);
+        return i;
+    }
+
     //查询作品下所有的评论
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)

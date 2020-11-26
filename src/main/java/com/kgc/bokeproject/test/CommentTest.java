@@ -24,4 +24,10 @@ public class CommentTest {
             System.out.println(comment.getContents());
         }
     }
+
+    @Test
+    public void test02(){
+        int comments = commentService.getCountByEssayId(4);
+        System.out.println(comments);
+    }
 }

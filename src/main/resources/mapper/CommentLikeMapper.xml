@@ -7,6 +7,7 @@
     <result column="com_id" property="comId" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="status" property="status" jdbcType="INTEGER" />
+    <association property="user" select="com.kgc.bokeproject.mapper.UsersMapper.selectByPrimaryKey" column="user_id"></association>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

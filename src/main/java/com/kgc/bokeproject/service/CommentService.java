@@ -10,6 +10,8 @@ import java.util.List;
  * 2020年11月25日19:29:34
  */
 public interface CommentService {
+    //查询作品下所有评论数
+    public int getCountByEssayId(Integer essayId);
     //查询作品下所有的评论
     public List<Comment> selectCommentByEssayId(Integer essayId);
     //发表评论

@@ -42,12 +42,10 @@ public class EssayLikeServiceImpl implements EssayLikeService {
     }
 
 
-    //取消点赞(更改自己点赞的属性status为0)
+    //取消点赞/重新点赞
     @Override
-    public boolean updateLike(Integer id) {
-        EssayLike like = essayLikeMapper.selectByPrimaryKey(id);
-        like.setStatus(0);
-        int i = essayLikeMapper.updateByPrimaryKeySelective(like);
+    public boolean updateLike(EssayLike essayLike) {
+        int i = essayLikeMapper.updateByPrimaryKeySelective(essayLike);
         return i>0?true:false;
     }
 
